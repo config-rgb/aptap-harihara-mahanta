@@ -111,7 +111,7 @@ async def get_menu_item(item_id: str):
         raise HTTPException(404, "Item not found")
     return item
 
-@api_router.post("/menu")
+@api_router.post("/menu", status_code=201)
 async def create_menu_item(data: MenuItemCreate, _=Depends(verify_admin)):
     doc = {
         "id": str(uuid.uuid4()),
@@ -142,7 +142,7 @@ async def delete_menu_item(item_id: str, _=Depends(verify_admin)):
 
 # ── Orders ──────────────────────────────────────────────
 
-@api_router.post("/orders")
+@api_router.post("/orders", status_code=201)
 async def create_order(data: OrderCreate):
     doc = {
         "id": str(uuid.uuid4()),
