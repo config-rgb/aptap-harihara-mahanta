@@ -1,0 +1,175 @@
+{
+  "project_name": "aptapcodes",
+  "theme_strategy": {
+    "mode": "dark",
+    "primary_archetype": "Luxury & Jewel",
+    "vibe": "Elegant, Intimate, Premium, Frictionless",
+    "target_audience": "Mobile-first diners (customers), Efficient staff (admin)"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "usage": "Hero titles, Section headers, Menu Category names",
+      "attributes": "tracking-tight font-medium"
+    },
+    "body": {
+      "font_family": "DM Sans, sans-serif",
+      "usage": "Descriptions, Prices, UI elements, Admin dashboard",
+      "attributes": "tracking-normal leading-relaxed"
+    },
+    "accents": {
+      "font_family": "Barlow Condensed, sans-serif",
+      "usage": "Price tags, Badges, Navigation items",
+      "attributes": "uppercase tracking-widest font-bold"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#0a0a0a",
+      "foreground": "#ededed",
+      "card": "#121212",
+      "card_foreground": "#ffffff",
+      "primary": "#D4AF37",
+      "primary_foreground": "#000000",
+      "secondary": "#27272a",
+      "secondary_foreground": "#e5e5e5",
+      "accent": "#C67C4E",
+      "accent_foreground": "#ffffff",
+      "muted": "#262626",
+      "muted_foreground": "#a3a3a3",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#D4AF37"
+    },
+    "gradients": {
+      "gold_shimmer": "linear-gradient(135deg, #D4AF37 0%, #F5DEB3 50%, #D4AF37 100%)",
+      "dark_fade": "linear-gradient(to bottom, rgba(10,10,10,0) 0%, #0a0a0a 100%)"
+    },
+    "functional": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#991B1B"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "class": "bg-black/40 backdrop-blur-xl border border-white/10",
+      "usage": "Sticky headers, Modal overlays, Floating cart button"
+    },
+    "shadows": {
+      "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.5)",
+      "glow": "0 0 15px rgba(212, 175, 55, 0.15)"
+    },
+    "borders": {
+      "subtle": "1px solid rgba(255, 255, 255, 0.08)",
+      "active": "1px solid #D4AF37"
+    }
+  },
+  "layout_strategies": {
+    "mobile_menu": {
+      "type": "Vertical Scroll with Sticky Categories",
+      "structure": "Hero Banner -> Category Tabs (Sticky) -> Item List -> Floating Cart Action",
+      "card_style": "Horizontal flex card. Image on left (30%), Text on right (70%). Add button distinct."
+    },
+    "admin_dashboard": {
+      "type": "Dense Data Grid",
+      "structure": "Sidebar Nav -> Top Stats Row -> Main Order Table",
+      "table_style": "Compact rows, status badges, quick actions (Accept/Reject)"
+    }
+  },
+  "components_map": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm font-bold uppercase tracking-wide",
+      "secondary": "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground rounded-sm",
+      "icon": "h-10 w-10 rounded-full bg-secondary/50 hover:bg-primary hover:text-black transition-colors"
+    },
+    "cards": {
+      "menu_item": "bg-card border-border/40 hover:border-primary/30 transition-all duration-300 overflow-hidden rounded-md",
+      "order_card": "bg-muted/30 border-l-4 border-l-primary p-4 rounded-r-md"
+    },
+    "inputs": {
+      "search": "bg-secondary/50 border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-full px-4"
+    }
+  },
+  "image_urls": {
+    "hero_banner": {
+      "url": "https://images.unsplash.com/photo-1766832255363-c9f060ade8b0?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Elegant dark dining room with mood lighting",
+      "usage": "Home page main banner with overlay text"
+    },
+    "ambience": {
+      "url": "https://images.unsplash.com/photo-1767050190883-29d644fa5b99?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Candlelit table setting",
+      "usage": "About section or background parallax"
+    },
+    "food_starters": {
+      "url": "https://images.unsplash.com/photo-1616668439955-8e6acfcb05c3?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Oysters on dark surface",
+      "usage": "Starters category image or item placeholder"
+    },
+    "food_main_steak": {
+      "url": "https://images.unsplash.com/photo-1625604086988-6e41981275fa?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Sliced steak on black wood",
+      "usage": "Main Course category image"
+    },
+    "food_main_burger": {
+      "url": "https://images.unsplash.com/photo-1663530761401-15eefb544889?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Gourmet burger plate",
+      "usage": "Burger item"
+    },
+    "food_drinks": {
+      "url": "https://images.unsplash.com/photo-1671053804479-a9049588251a?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Smoky cocktail glass",
+      "usage": "Drinks category image"
+    },
+    "food_dessert": {
+      "url": "https://images.unsplash.com/photo-1638180625058-e70c77bd90c6?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Chocolate cookies dessert",
+      "usage": "Desserts category image"
+    }
+  },
+  "implementation_steps": {
+    "phase_1_setup": "Install shadcn components (card, button, badge, dialog, scroll-area, tabs, input, table, separator). Configure Tailwind colors and fonts.",
+    "phase_2_pages": [
+      "Create Home (Landing) with 'Scan QR' CTA",
+      "Create Menu Page (Tabs for categories, Scrollable list, Add to Cart logic)",
+      "Create Cart Page (Review order, Quantity adjust, Checkout)",
+      "Create Admin Dashboard (Order feed, Menu CRUD)"
+    ],
+    "phase_3_logic": [
+      "Implement Cart Context/State",
+      "Mock API calls for placing orders",
+      "Admin state management for order status changes"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Do not use white backgrounds. Default to #0a0a0a.",
+    "Use 'Playfair Display' for all Headings (h1, h2, h3).",
+    "Use 'DM Sans' for body text.",
+    "For the Menu List: Use a sticky secondary navbar for categories (Starters, Mains, etc).",
+    "Animations: Use 'framer-motion' for simple fade-ins on menu items. staggerChildren: 0.05.",
+    "QR Code: Use 'qrcode.react' library.",
+    "Icons: Use 'lucide-react' with stroke-width={1.5} for elegance.",
+    "Forms: Use Shadcn Form components but style inputs with border-b only (material style) or minimal outline.",
+    "Data IDs: Add data-testid to all interactive elements."
+  ],
+  "universal_guidelines": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts located in /app/src/components/ui/sonner.tsx"
+  ]
+}
